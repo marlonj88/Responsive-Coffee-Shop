@@ -114,7 +114,7 @@ body {
 }
 
 .header .search-form label:hover {
-    color: var(--main-color);
+    color: var(--black);
 }
 
 .header .cart-items-conteiner {
