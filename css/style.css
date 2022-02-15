@@ -41,6 +41,20 @@ body {
     background: var(--bg);
 }
 
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .1rem;
+}
+
 .header {
     background: var(--bg);
     display: flex;
@@ -80,7 +94,7 @@ body {
     color: var(--main-color);
 }
 
-#menu-bnt {
+#menu-btn {
     display: none;
 }
 
@@ -119,7 +133,7 @@ body {
 
 .header .cart-items-conteiner {
     position: absolute;
-    top: 100%; right: 0;
+    top: 100%; right: -100%;
     height: calc(100vh - 9.5rem);
     width: 35rem;
     background: #fff;
@@ -132,4 +146,76 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+.header .cart-items-conteiner .cart-item .fa-times {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-conteiner .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-conteiner .cart-item img {
+    height: 7rem;
+}
+
+.header .cart-items-conteiner .cart-item .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-conteiner .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.header .cart-items-conteiner .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* media queries */
+@media (max-width: 991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    
+    .header .navbar.active {
+        right:0;
+    }
+
+    .header .navbar a {
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
 }
